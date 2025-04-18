@@ -2,107 +2,128 @@ export interface Exercise {
   id: number;
   title: string;
   description: string;
+  testExample?: string;
 }
 
 export const exercises: Exercise[] = [
   {
     id: 1,
-    title: "Saudação do Reino",
-    description: "Escreva uma função que exiba \"Bem-vindo à Terra-Média\"."
+    title: "FizzBuzz",
+    description: "Escreva uma função que percorra os números de 1 até 100 e, para cada número: se for múltiplo de 3, retorne 'Fizz'; se for múltiplo de 5, retorne 'Buzz'; e se for múltiplo de ambos, 'FizzBuzz'. Caso contrário, retorne o próprio número.",
+    testExample: "assert fizzbuzz(3) == 'Fizz'"
   },
   {
     id: 2,
-    title: "Contador de Orcs",
-    description: "Crie uma função que conte quantos orcs estão em uma lista."
+    title: "Palíndromo",
+    description: "Verifique se uma palavra ou frase é lida da mesma forma de trás para frente, ignorando espaços e acentuação. Por exemplo, 'radar' e 'anilina' são palíndromos.",
+    testExample: "assert palindromo('radar') == true"
   },
   {
     id: 3,
-    title: "Forja de Nomes Élficos",
-    description: "Receba um nome e retorne a versão \"élfica\" (ex: adicionar \"-el\" ao final)."
+    title: "Anagramas",
+    description: "Determine se duas palavras são compostas pelas mesmas letras, em ordens diferentes. 'amor' e 'roma' são anagramas, mas 'amor' e 'rima' não são.",
+    testExample: "assert anagramas('amor', 'roma') == true"
   },
   {
     id: 4,
-    title: "Sorteador de Magias",
-    description: "Faça uma função que escolha aleatoriamente uma magia de uma lista."
+    title: "Números Primos",
+    description: "Retorne todos os números primos até um número fornecido. Por exemplo, até 10, os primos são 2, 3, 5 e 7.",
+    testExample: "assert primos(10) == [2, 3, 5, 7]"
   },
   {
     id: 5,
-    title: "Filtro de Anões",
-    description: "Filtre nomes com menos de 5 letras de uma lista de guerreiros."
+    title: "Soma de Pares",
+    description: "Encontre todos os pares de números em uma lista que somam um valor alvo. Exemplo: em [1, 2, 3, 4], os pares que somam 5 são [1,4] e [2,3].",
+    testExample: "assert soma_de_pares([1,2,3,4], 5) == [[1,4], [2,3]]"
   },
   {
     id: 6,
-    title: "Conversor de Runas",
-    description: "Converta uma lista de strings para uppercase (como gritos de guerra)."
+    title: "Maior Palavra",
+    description: "Receba uma frase e encontre a palavra com maior quantidade de letras. Por exemplo: 'o mago de elixir' → 'elixir'.",
+    testExample: "assert maior_palavra('o mago de elixir') == 'elixir'"
   },
   {
     id: 7,
-    title: "Contagem Reversa do Apocalipse",
-    description: "Imprima números de 10 até 1."
+    title: "Contador de Caracteres",
+    description: "Dada uma string, conte quantas vezes cada caractere aparece. Exemplo: 'aab' → 'a': 2, 'b': 1.",
+    testExample: "assert contar_caracteres('aab') == %{ 'a' => 2, 'b' => 1 }"
   },
   {
     id: 8,
-    title: "Mapa do Tesouro",
-    description: "Escreva uma função que receba coordenadas e retorne \"Tesouro encontrado\" se estiver no X do mapa."
+    title: "Cifra de César",
+    description: "Implemente um deslocamento simples das letras do alfabeto. Exemplo: com deslocamento 1, 'abc' vira 'bcd'.",
+    testExample: "assert cifra_cesar('abc', 1) == 'bcd'"
   },
   {
     id: 9,
-    title: "Detector de Trolls",
-    description: "Verifique se uma string contém palavras proibidas."
+    title: "Ordenação",
+    description: "Ordene uma lista de inteiros do menor para o maior. Exemplo: [3,2,1] → [1,2,3].",
+    testExample: "assert bubble_sort([3,2,1]) == [1,2,3]"
   },
   {
     id: 10,
-    title: "Tradutor Élfico",
-    description: "Substitua todas as vogais por \"ë\"."
+    title: "Busca Binária",
+    description: "Procure por um número em uma lista ordenada usando divisão e conquista. Retorne true se existir.",
+    testExample: "assert busca_binaria([1,2,3,4], 3) == true"
   },
   {
     id: 11,
-    title: "Relógio do Tempo Mágico",
-    description: "Crie uma função que exiba o horário atual formatado."
+    title: "Contagem de Vogais",
+    description: "Conte quantas vogais (a, e, i, o, u) aparecem em uma palavra.",
+    testExample: "assert contar_vogais('elixir') == 3"
   },
   {
     id: 12,
-    title: "Poção de Soma",
-    description: "Some todos os valores de uma lista de números mágicos."
+    title: "Inversão de String",
+    description: "Receba uma palavra e retorne seus caracteres invertidos. Exemplo: 'elixir' → 'rixile'.",
+    testExample: "assert inverter('elixir') == 'rixile'"
   },
   {
     id: 13,
-    title: "Contador de Encantamentos",
-    description: "Conte quantas vezes uma palavra aparece em um texto."
+    title: "Sequência de Fibonacci",
+    description: "Retorne os n primeiros números da sequência de Fibonacci: 0, 1, 1, 2, 3, 5...",
+    testExample: "assert fibonacci(5) == [0,1,1,2,3]"
   },
   {
     id: 14,
-    title: "Grimório de Palíndromos",
-    description: "Verifique se uma palavra é igual quando invertida."
+    title: "Validador de CPF",
+    description: "Verifique se um CPF é válido segundo o algoritmo oficial de validação.",
+    testExample: "assert validar_cpf('123.456.789-09') == false"
   },
   {
     id: 15,
-    title: "Tabela de Elementos",
-    description: "Exiba uma tabela com nomes e elementos (nomeado como \"elixir\" do personagem)."
+    title: "Calculadora de IMC",
+    description: "Receba peso (kg) e altura (m) e calcule o índice de massa corporal (IMC).",
+    testExample: "assert imc(70, 1.75) == 22.86"
   },
   {
     id: 16,
-    title: "Gerador de Feitiços Aleatórios",
-    description: "Gere uma string aleatória com letras mágicas e imprima."
+    title: "Conversor de Temperatura",
+    description: "Transforme um valor de temperatura de Celsius para Fahrenheit e vice-versa.",
+    testExample: "assert celsius_para_fahrenheit(0) == 32"
   },
   {
     id: 17,
-    title: "Bússola de Direções",
-    description: "Crie uma função que receba \"norte\", \"sul\" etc., e retorne a ação correspondente."
+    title: "Validador de Parênteses",
+    description: "Verifique se uma expressão possui todos os parênteses (e colchetes/chaves) corretamente fechados.",
+    testExample: "assert validar_parenteses('()[]{}') == true"
   },
   {
     id: 18,
-    title: "Inventário do Herói",
-    description: "Adicione itens mágicos a uma lista sem repetir."
+    title: "Contador de Palavras",
+    description: "Receba uma frase e conte quantas palavras ela possui.",
+    testExample: "assert contar_palavras('o mago elixir') == 3"
   },
   {
     id: 19,
-    title: "Sistema de Pontos de Mana",
-    description: "Crie um sistema que adicione/remova pontos de energia do mago."
+    title: "Jogo da Forca",
+    description: "Simule a revelação parcial de letras em uma palavra com base na letra escolhida.",
+    testExample: "assert forca('elixir', 'e') == ['e','_','_','_','_','_']"
   },
   {
     id: 20,
-    title: "Simulador de Duelo",
-    description: "Crie duas funções: uma para atacar e outra para defender, simulando um duelo de códigos mágicos."
+    title: "Calculadora de Troco",
+    description: "Calcule o troco entre o valor pago e o preço da compra, retornando as moedas necessárias.",
+    testExample: "assert troco(10, 7.5) == [2, 0.5]"
   }
 ];
